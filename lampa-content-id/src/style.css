@@ -1,0 +1,136 @@
+.lci {
+    box-sizing: border-box;
+    height: calc(100vh - 5em);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 1.35em 1.65em 2.25em;
+    color: #f5f7fc;
+    -webkit-overflow-scrolling: touch;
+}
+.lci-panel {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 43em;
+    margin: 0 auto;
+    padding: 1.55em;
+    border: 1px solid #364154;
+    border-radius: .85em;
+    background: #1d2636;
+}
+.lci-eyebrow {
+    margin-bottom: .7em;
+    color: #a7b7cf;
+    font-size: .73em;
+    font-weight: bold;
+    letter-spacing: .12em;
+}
+.lci-eyebrow.lci-has-id { color: #81e1cb; }
+.lci-title {
+    margin: 0;
+    font-size: 1.8em;
+    line-height: 1.16;
+    word-wrap: break-word;
+}
+.lci-subtitle {
+    margin: .55em 0 1.1em;
+    color: #b9c6da;
+    line-height: 1.35;
+}
+.lci-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    margin: 0 -.35em .7em;
+}
+.lci-tile {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-flex: 1 1 0;
+    flex: 1 1 0;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 3.1em;
+    margin: 0 .35em;
+    padding: .65em .85em;
+    border: 2px solid transparent;
+    border-radius: .52em;
+    background: #2e3a50;
+    color: #f4f7fc;
+    line-height: 1.25;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+.lci-tile.selector { cursor: pointer; }
+.lci-caption {
+    margin-bottom: .2em;
+    color: #bdcbe0;
+    font-size: .75em;
+}
+.lci-value {
+    font-size: 1em;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.lci-tile[data-lci-key="prev"] .lci-value,
+.lci-tile[data-lci-key="next"] .lci-value {
+    white-space: normal;
+}
+.lci-choice {
+    position: absolute;
+    right: .56em;
+    top: 50%;
+    margin-top: -.66em;
+    font-size: 1.4em;
+    color: #bbd4f3;
+}
+.lci-tile[data-lci-key="id"],
+.lci-tile[data-lci-key="season"],
+.lci-tile[data-lci-key="episode"],
+.lci-tile[data-lci-key="voice"],
+.lci-tile[data-lci-key="quality"] { padding-right: 1.75em; }
+.lci-tile.lci-play {
+    min-height: 3.15em;
+    background: #93f1da;
+    color: #112d2e;
+    text-align: center;
+}
+.lci-tile.lci-disabled {
+    opacity: .57;
+    cursor: default;
+}
+.lci-tile.selector.lci-active,
+.lci-tile.selector.focus {
+    border-color: #ffffff;
+    background: #465d80;
+    color: #ffffff;
+    box-shadow: 0 0 0 2px #101827;
+}
+.lci-tile.lci-play.selector.lci-active,
+.lci-tile.lci-play.selector.focus {
+    background: #c2fff0;
+    color: #112d2e;
+}
+.lci-status {
+    min-height: 1.3em;
+    margin: .9em 0 0;
+    color: #c6d7ed;
+    font-size: .88em;
+    line-height: 1.45;
+}
+.lci-status.lci-status-error { color: #ffd1a8; }
+@media (max-width: 600px) {
+    .lci { padding: .65em .7em 1.25em; }
+    .lci-panel { padding: .85em; }
+    .lci-tile { padding-left: .58em; min-height: 3.25em; }
+}

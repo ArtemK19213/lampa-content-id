@@ -1,0 +1,11 @@
+{
+  "name": "lampa-content-id",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lampa plugin for playback by content-id",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "npm run build && node --test test/*.test.js"
+  },
+  "engines": { "node": ">=18" }
+}
